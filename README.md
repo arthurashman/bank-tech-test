@@ -23,3 +23,29 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+### User stories
+```
+As a user 
+I want to be able to deposit money
+So I can store it in my account
+```
+```
+As a user
+I want to be able to withdraw money
+So I can get it out of my account
+```
+```
+As a user 
+I want to be able to see my balance
+So I know how much money I have
+```
+```
+As a user 
+I want to see a statement 
+So I can chek my interations with my account
+```
+```
+As a user
+I want to see dates and value of interations on my statement
+So I can check them against my records
+```
