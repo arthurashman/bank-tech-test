@@ -13,7 +13,7 @@ describe Account do
   describe '#deposit' do
     it 'adds deposited amount to balance' do
       allow(statement_entry_class).to receive(:new).and_return(statement_entry)
-      expect{account.deposit(500, statement_entry_class)}.to change{account.balance}.from(0).to(500)
+      expect { account.deposit(500, statement_entry_class) }.to change { account.balance }.from(0).to(500)
     end
 
     it 'inputs a statement entry into statement' do
@@ -27,13 +27,13 @@ describe Account do
     it 'subracts withdrawn amount from balance' do
       allow(statement_entry_class).to receive(:new).and_return(statement_entry)
       account.deposit(1000, statement_entry_class)
-      expect{account.withdraw(500, statement_entry_class)}.to change{account.balance}.from(1000).to(500)
+      expect { account.withdraw(500, statement_entry_class) }.to change { account.balance }.from(1000).to(500)
     end
     it 'inputs a statement entry into statement' do
       allow(statement_entry_class).to receive(:new).and_return(statement_entry)
       account.withdraw(500, statement_entry_class)
-      expect(account.statement).to include(statement_entry)   
-     end
+      expect(account.statement).to include(statement_entry)
+    end
   end
 
   describe '#view_statement' do
@@ -42,7 +42,4 @@ describe Account do
       account.view_statement(statement_printer_class)
     end
   end
-
-
 end
-
